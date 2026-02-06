@@ -1,7 +1,11 @@
-import { Routes, Route } from "react-router-dom"
-import HeaderComponent from "./components/HeaderComponent.jsx"
-import Home from "./pages/Home.jsx"
-import Students from "./pages/Students.jsx"
+import { Routes, Route } from "react-router-dom";
+
+// Components
+import HeaderComponent from "./components/HeaderComponent.jsx";
+
+// Pages
+import Home from "./pages/Home.jsx";
+import Students from "./pages/Students.jsx";
 
 function App() {
   return (
@@ -13,7 +17,7 @@ function App() {
         <Route path="/students" element={<Students />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

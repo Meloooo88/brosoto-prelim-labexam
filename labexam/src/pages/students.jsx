@@ -24,7 +24,6 @@ function Students() {
     fetchStudents()
   }, [])
 
-  // Filter students based on search term
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(searchTerm.toLowerCase())
   )
@@ -33,10 +32,9 @@ function Students() {
   if (error) return <p style={{ color: "red" }}>{error}</p>
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <h1>Students Page</h1>
 
-      {/* Search bar */}
       <input
         type="text"
         placeholder="Search students by name..."
@@ -59,6 +57,7 @@ function Students() {
             name={user.name}
             course="BSIT"
             year="4th Year"
+            highlight={searchTerm}
           />
         ))
       ) : (
